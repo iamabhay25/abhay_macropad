@@ -15,7 +15,7 @@ Schematic:
 <img width="1464" height="1632" alt="Screenshot 2026-02-01 at 9 48 46 PM" src="https://github.com/user-attachments/assets/fd83e860-2f62-4607-ac13-63da56dc5a76" />
 
 PCB:
-<img width="1142" height="846" alt="Screenshot 2026-02-01 at 4 25 45 PM" src="https://github.com/user-attachments/assets/2ce865ab-be3d-47fb-ac3d-5ed38fc8f65d" />
+<img width="2032" height="1356" alt="Screenshot 2026-02-01 at 9 53 08 PM" src="https://github.com/user-attachments/assets/241930fa-1632-4ddf-bb42-b37af368738f" />
 <img width="1916" height="1428" alt="Screenshot 2026-02-01 at 9 50 02 PM" src="https://github.com/user-attachments/assets/8cbe7ecd-665c-4797-b3ed-3d30b37a24ba" />
 
 Macroboard Top Case CAD:
