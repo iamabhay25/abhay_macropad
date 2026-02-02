@@ -12,11 +12,11 @@ Bill of Materials: <br>
 - 4x M3 Heatset<br>
 
 Schematic:
-<img width="1160" height="1380" alt="Screenshot 2026-02-01 at 4 26 08 PM" src="https://github.com/user-attachments/assets/6baee14d-056e-466e-b293-a4340e25fa9d" />
+<img width="1464" height="1632" alt="Screenshot 2026-02-01 at 9 48 46 PM" src="https://github.com/user-attachments/assets/fd83e860-2f62-4607-ac13-63da56dc5a76" />
 
 PCB:
-<img width="1142" height="846" alt="Screenshot 2026-02-01 at 4 25 45 PM" src="https://github.com/user-attachments/assets/1e9888f3-8347-4cb7-b5a3-ab5ee970cf3c" />
-<img width="2152" height="1430" alt="Screenshot 2026-02-01 at 4 29 30 PM" src="https://github.com/user-attachments/assets/920825fd-1c4e-4c89-84a2-0fb0c45c6c36" />
+<img width="1142" height="846" alt="Screenshot 2026-02-01 at 4 25 45 PM" src="https://github.com/user-attachments/assets/2ce865ab-be3d-47fb-ac3d-5ed38fc8f65d" />
+<img width="1916" height="1428" alt="Screenshot 2026-02-01 at 9 50 02 PM" src="https://github.com/user-attachments/assets/8cbe7ecd-665c-4797-b3ed-3d30b37a24ba" />
 
 Macroboard Top Case CAD:
 <img width="2236" height="1492" alt="Screenshot 2026-02-01 at 4 30 23 PM" src="https://github.com/user-attachments/assets/b9aba491-9bc0-4460-9adf-4fca62c8675d" />
