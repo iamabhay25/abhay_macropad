@@ -1,4 +1,6 @@
 import board
+import time
+import threading
 from kmk.kmk_keyboard import KMKKeyboard
 from kmk.keys import KC
 from kmk.extensions.neopixel import NeoPixel
@@ -46,6 +48,32 @@ rgb = NeoPixel(
 )
 keyboard.extensions.append(rgb)
 
+# Default to white
+rgb.fill((255, 255, 255))
+
+# --------------------
+# LED Helper Functions
+# --------------------
+blinking_flag = False  # global flag to control blinking
+
+def blink_color(color, times=1, delay=0.2):
+    """Blink all LEDs a fixed number of times, then return to white"""
+    for _ in range(times):
+        rgb.fill(color)
+        time.sleep(delay)
+        rgb.fill((0, 0, 0))
+        time.sleep(delay)
+    rgb.fill((255, 255, 255))  # back to default white
+
+def blink_while_running(color=(0,0,255), interval=0.2):
+    """Blink LEDs continuously while blinking_flag is True"""
+    while blinking_flag:
+        rgb.fill(color)
+        time.sleep(interval)
+        rgb.fill((0,0,0))
+        time.sleep(interval)
+    rgb.fill((255, 255, 255))
+
 # --------------------
 # CHROME TAP DANCE
 # --------------------
@@ -63,6 +91,32 @@ CHROME_SELECTOR = KC.TD(
     OPEN_CHROME_SCHOOL,    # 1 Tap → School
     OPEN_CHROME_PERSONAL   # 2 Taps → Personal
 )
+
+# --------------------
+# GLOBAL KEYPRESS HOOK
+# --------------------
+def on_key_press(key):
+    """Blink LEDs for any key, macro or normal shortcut"""
+    global blinking_flag
+    blinking_flag = True
+    
+    # Start blinking in a separate thread
+    t = threading.Thread(target=blink_while_running)
+    t.start()
+
+    # Run the key action if callable (macro or tapdance)
+    if callable(key):
+        key()  # execute macro or tapdance
+    
+    # Stop blinking when done
+    blinking_flag = False
+    t.join()
+
+    # Blink red once to signal completion
+    blink_color((0,255,0), times=2)
+
+# Register the hook
+keyboard.pre_keypress.append(on_key_press)
 
 # --------------------
 # KEYMAP
