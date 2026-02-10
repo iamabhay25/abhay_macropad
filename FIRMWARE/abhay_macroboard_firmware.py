@@ -1,30 +1,29 @@
 import board
-
 from kmk.kmk_keyboard import KMKKeyboard
 from kmk.keys import KC
 from kmk.extensions.neopixel import NeoPixel
 from kmk.extensions.oled import Oled, OledDisplayMode
-from kmk.handlers.sequences import simple_key_sequence
+from kmk.modules.tapdance import TapDance
+from kmk.modules.macros import Tap, Delay
 
 keyboard = KMKKeyboard()
 
 # --------------------
-# KEY PIN DEFINITIONS
+# KEY PINS
 # --------------------
 keyboard.col_pins = (
     board.GP26,  # KEY 1
     board.GP27,  # KEY 2
     board.GP28,  # KEY 3
     board.GP29,  # KEY 4
-    board.GP6,   # KEY 5 (SDA)
-    board.GP7,   # KEY 6 (SCL)
+    board.GP6,   # KEY 5
+    board.GP7,   # KEY 6
 )
-
 keyboard.row_pins = ()
 keyboard.diode_orientation = None
 
 # --------------------
-# OLED SETUP
+# OLED
 # --------------------
 oled = Oled(
     sda=board.GP6,
@@ -34,79 +33,48 @@ oled = Oled(
     height=32,
     display_mode=OledDisplayMode.TXT,
 )
-
 keyboard.extensions.append(oled)
 
 # --------------------
-# HELPER FUNCTION
-# This updates the OLED when a key is pressed
-# --------------------
-def show_key(oled, key_num, label):
-    oled.clear()
-    oled.write("Key Pressed:\n")
-    oled.write(f"KEY {key_num}\n")
-    oled.write(label)
-
-# --------------------
-# CUSTOM KEYS
-# Each key both:
-# 1. Sends its normal shortcut
-# 2. Prints info to the OLED
-# --------------------
-
-KEY1 = KC.MACRO(
-    simple_key_sequence(lambda *_: show_key(oled, 1, "Screenshot Sel")),
-    KC.LGUI(KC.LSHIFT(KC.N4))
-)
-
-KEY2 = KC.MACRO(
-    simple_key_sequence(lambda *_: show_key(oled, 2, "Save As")),
-    KC.LGUI(KC.LSHIFT(KC.S))
-)
-
-KEY3 = KC.MACRO(
-    simple_key_sequence(lambda *_: show_key(oled, 3, "Reopen Tab")),
-    KC.LGUI(KC.LSHIFT(KC.T))
-)
-
-KEY4 = KC.MACRO(
-    simple_key_sequence(lambda *_: show_key(oled, 4, "Force Quit")),
-    KC.LGUI(KC.LALT(KC.ESC))
-)
-
-KEY5 = KC.MACRO(
-    simple_key_sequence(lambda *_: show_key(oled, 5, "Lock Screen")),
-    KC.LCTRL(KC.LGUI(KC.Q))
-)
-
-KEY6 = KC.MACRO(
-    simple_key_sequence(lambda *_: show_key(oled, 6, "Shot Window")),
-    KC.LGUI(KC.LSHIFT(KC.N4)),
-    KC.SPACE
-)
-
-# --------------------
-# RGB (SK6812)
+# RGB
 # --------------------
 rgb = NeoPixel(
     pin=board.GP3,
     num_pixels=2,
-    brightness=0.3,
+    brightness=1.0,
     auto_write=True,
 )
 keyboard.extensions.append(rgb)
+
+# --------------------
+# CHROME TAP DANCE
+# --------------------
+OPEN_CHROME_SCHOOL = KC.MACRO(
+    Tap(KC.LGUI, KC.SPACE), Delay(200), "CHROME", Tap(KC.ENTER), Delay(600),
+    *([Tap(KC.TAB)] * 10)
+)
+
+OPEN_CHROME_PERSONAL = KC.MACRO(
+    Tap(KC.LGUI, KC.SPACE), Delay(200), "CHROME", Tap(KC.ENTER), Delay(600),
+    *([Tap(KC.TAB)] * 7)
+)
+
+CHROME_SELECTOR = KC.TD(
+    OPEN_CHROME_SCHOOL,    # 1 Tap → School
+    OPEN_CHROME_PERSONAL   # 2 Taps → Personal
+)
 
 # --------------------
 # KEYMAP
 # --------------------
 keyboard.keymap = [
     [
-        KEY1,  # KEY 1
-        KEY2,  # KEY 2
-        KEY3,  # KEY 3
-        KEY4,  # KEY 4
-        KEY5,  # KEY 5
-        KEY6,  # KEY 6
+        KC.LGUI(KC.LSHIFT(KC.N4)),  # 1: Screenshot
+        CHROME_SELECTOR,            # 2: TAP ONCE FOR SCHOOL / TWICE FOR PERSONAL
+        KC.LGUI(KC.LSHIFT(KC.T)),   # 3: Reopen Tab
+        KC.LGUI(KC.LALT(KC.ESC)),   # 4: Force Quit
+        KC.LCTRL(KC.LGUI(KC.Q)),    # 5: Lock Screen
+        KC.LGUI(KC.LSHIFT(KC.N4), KC.SPACE), # 6: Screenshot Whole Screen
     ]
 ]
 
