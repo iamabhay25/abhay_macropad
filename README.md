@@ -12,7 +12,7 @@ Bill of Materials: <br>
 - 4x M3 Heatset<br>
 <br>
 Schematic:
-<img width="1464" height="1632" alt="Screenshot 2026-02-01 at 9 48 46 PM" src="https://github.com/user-attachments/assets/fd83e860-2f62-4607-ac13-63da56dc5a76" />
+<img width="2192" height="1514" alt="Screenshot 2026-04-18 at 4 56 59 PM" src="https://github.com/user-attachments/assets/19230ce0-843c-48a4-8e6c-77a6fb3ea057" />
 <br><br>
 PCB:
 <img width="672" height="688" alt="Screenshot 2026-04-18 at 4 45 11 PM" src="https://github.com/user-attachments/assets/de017f86-c29a-4133-be6d-d08a21203d0a" />
