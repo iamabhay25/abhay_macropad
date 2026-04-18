@@ -11,7 +11,7 @@ Bill of Materials:<br>
 - 4x M3x16 Bolt: I currently have them<br>
 - 4x M3 Heatset: I currently have them<br>
 - Flux: 2.75$  (FREE SHIPPING)<br>
-- Single row male header pins: .99$ (FREE SHIPPING)<br>
+- Single row male header pins: .99$ (FREE SHIPPING)<br><br>
 TOTAL COST: 33.27$
 <br>
 Schematic:
