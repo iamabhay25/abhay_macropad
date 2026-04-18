@@ -6,7 +6,7 @@ Bill of Materials:<br>
 - 1x OLED Screen: 0.99$ (FREE SHIPPING)<br>
 - 1x 3D Printed Case: (FREE) / (PRINTING LEGION SHIPPING: 6$)<br>
 - 6x HMX FROG TACTILE Switches: 9.36 (SHIPPING: 6.46)<br> 
-- 4x SK6812 MINI E Leds: .99$ (FREE SHIPPING)<br>
+- 6x SK6812 MINI E Leds: .99$ (FREE SHIPPING)<br>
 - 1x XIAO RP2040: 5.73$ (FREE SHIPPING)<br>
 - 6x Blank DSA Keycaps: I currently have them<br>
 - 4x M3x16 Bolt: I currently have them<br>
