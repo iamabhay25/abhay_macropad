@@ -1,4 +1,4 @@
-# Abhay's Hackpad Macropad
+# Abhay's Macropad
 My personal macropad for everyday use. 
 <br>
 Bill of Materials: <br>
