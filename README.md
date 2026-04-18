@@ -5,7 +5,7 @@ Bill of Materials: <br>
 - 1x OLED Screen
 - 1x 3D Printed Case
 - 6x Cherry MX Switches<br>
-- 2x SK6812 MINI Leds<br>
+- 4x SK6812 MINI E Leds<br>
 - 1x XIAO RP2040<br>
 - 6x Blank DSA Keycaps<br>
 - 4x M3x16 Bolt<br>
@@ -15,18 +15,18 @@ Schematic:
 <img width="1464" height="1632" alt="Screenshot 2026-02-01 at 9 48 46 PM" src="https://github.com/user-attachments/assets/fd83e860-2f62-4607-ac13-63da56dc5a76" />
 <br><br>
 PCB:
-<img width="2032" height="1356" alt="Screenshot 2026-02-01 at 9 53 08 PM" src="https://github.com/user-attachments/assets/241930fa-1632-4ddf-bb42-b37af368738f" />
-<img width="1916" height="1428" alt="Screenshot 2026-02-01 at 9 50 02 PM" src="https://github.com/user-attachments/assets/8cbe7ecd-665c-4797-b3ed-3d30b37a24ba" />
+<img width="672" height="688" alt="Screenshot 2026-04-18 at 4 45 11 PM" src="https://github.com/user-attachments/assets/de017f86-c29a-4133-be6d-d08a21203d0a" />
+<img width="706" height="730" alt="Screenshot 2026-04-18 at 4 45 30 PM" src="https://github.com/user-attachments/assets/82a31314-e660-4e6c-9f26-80554056221b" />
 <br><br>
 Macroboard Top Case CAD:
-<img width="1164" height="697" alt="Screenshot 2026-02-05 at 6 32 46 PM" src="https://github.com/user-attachments/assets/1f29d76d-7518-435a-b5f6-e8814cd8773e" />
+<img width="1261" height="742" alt="Screenshot 2026-04-18 at 4 44 52 PM" src="https://github.com/user-attachments/assets/fc6e4b70-89f9-4527-90d4-4549c82ab1c3" />
 <br><br>
 Macroboard Bottom Case CAD:
-<img width="2228" height="1520" alt="Screenshot 2026-02-01 at 4 29 57 PM" src="https://github.com/user-attachments/assets/1657cebf-4b11-4b29-a37c-cf8b3e31be42" />
+<img width="1223" height="743" alt="Screenshot 2026-04-18 at 4 44 58 PM" src="https://github.com/user-attachments/assets/5530967e-82f3-4b8a-ae6f-91f03408cbc0" />
 <br><br>
-Macroboard Final Build:
-<img width="2282" height="1464" alt="Screenshot 2026-02-01 at 4 31 30 PM" src="https://github.com/user-attachments/assets/05aa0483-56fe-40b3-866c-20ad7325a015" />
-<img width="1294" height="731" alt="Screenshot 2026-02-05 at 6 43 51 PM" src="https://github.com/user-attachments/assets/ec83b037-6d73-4f76-bbe2-4b242af15769" />
+Macroboard Final Assembly:
+<img width="1119" height="745" alt="Screenshot 2026-04-18 at 4 44 46 PM" src="https://github.com/user-attachments/assets/67bd3eee-8c66-40ae-a064-766dcad660d5" />
+
 
 
 
