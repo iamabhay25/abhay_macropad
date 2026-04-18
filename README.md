@@ -2,6 +2,7 @@
 My personal macropad for everyday use. 
 <br>
 Bill of Materials:<br>
+- Custom PCB: 2$ (SHIPPING: 3.12$)
 - 1x OLED Screen: 0.99$ (FREE SHIPPING)<br>
 - 1x 3D Printed Case: (FREE) / (PRINTING LEGION SHIPPING: 6$)<br>
 - 6x HMX FROG TACTILE Switches: 9.36 (SHIPPING: 6.46)<br> 
@@ -12,7 +13,7 @@ Bill of Materials:<br>
 - 4x M3 Heatset: I currently have them<br>
 - Flux: 2.75$  (FREE SHIPPING)<br>
 - Single row male header pins: .99$ (FREE SHIPPING)<br><br>
-TOTAL COST: 33.27$
+TOTAL COST: 38.39$
 <br>
 Schematic:
 <img width="2192" height="1514" alt="Screenshot 2026-04-18 at 4 56 59 PM" src="https://github.com/user-attachments/assets/19230ce0-843c-48a4-8e6c-77a6fb3ea057" />
