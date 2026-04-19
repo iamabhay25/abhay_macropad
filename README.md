@@ -2,18 +2,8 @@
 My personal macropad for everyday use. 
 <br>
 Bill of Materials:<br>
-- Custom PCB: 2$ (SHIPPING: 3.12$)
-- 1x OLED Screen: 0.99$ (FREE SHIPPING)<br>
-- 1x 3D Printed Case: (FREE) / (PRINTING LEGION SHIPPING: 6$)<br>
-- 6x HMX FROG TACTILE Switches: 9.36 (SHIPPING: 6.46)<br> 
-- 6x SK6812 MINI E Leds: .99$ (FREE SHIPPING)<br>
-- 1x XIAO RP2040: 5.73$ (FREE SHIPPING)<br>
-- 6x Blank DSA Keycaps: I currently have them<br>
-- 4x M3x16 Bolt: I currently have them<br>
-- 4x M3 Heatset: I currently have them<br>
-- Flux: 2.75$  (FREE SHIPPING)<br>
-- Single row male header pins: .99$ (FREE SHIPPING)<br><br>
-TOTAL COST: 38.39$
+<img width="1756" height="1020" alt="Screenshot 2026-04-18 at 7 11 28 PM" src="https://github.com/user-attachments/assets/29d2df25-1f3c-45ac-8e63-908877ec04aa" /> <br>
+<img width="1726" height="86" alt="Screenshot 2026-04-18 at 7 14 00 PM" src="https://github.com/user-attachments/assets/16687044-df10-4db3-a54d-36ca7ef742c7" />
 <br>
 Schematic:
 <img width="2192" height="1514" alt="Screenshot 2026-04-18 at 4 56 59 PM" src="https://github.com/user-attachments/assets/19230ce0-843c-48a4-8e6c-77a6fb3ea057" />
