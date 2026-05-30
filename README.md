@@ -66,7 +66,7 @@ Total w/ printing legion shipping: $54.02
 
 <br>
 
-#### Macropad Bottom Case:
+### Macropad Bottom Case:
 <img width="1175" height="756" alt="Screenshot 2026-05-30 at 1 46 41 PM" src="https://github.com/user-attachments/assets/dbd20fa5-8ca8-4ce6-af3b-f1c93db07eb4" />
 
 
