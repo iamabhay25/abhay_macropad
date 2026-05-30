@@ -8,7 +8,7 @@ Custom designed macropad for everyday use.
 
 Features 9 keys with per-key underglow LEDs, a 128×32 SSD1306 OLED display, and a rotary encoder.
 
-<br><br>
+<br>
 
 <img width="900" alt="Final Assembly" src="https://github.com/user-attachments/assets/6f29e158-8f8e-426c-830c-c94fb2ee9b58" />
 
