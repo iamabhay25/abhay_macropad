@@ -32,16 +32,16 @@ Bill of Materials:
 
 Total: $47.02<br>
 Total w/ printing legion shipping: $54.02
-<br><br>
+<br><br><br><br>
 
-PCB Schematic:
+
+
+### PCB Schematic:
 
 <img width="1115" height="770" alt="Screenshot 2026-05-30 at 1 39 43 PM" src="https://github.com/user-attachments/assets/147b6c05-4dff-4454-805b-16bef076c9a8" />
+<b><b><br><br>
 
-
-<b><b>
-
-PCB Layout:
+### PCB Layout:
 <br>
 
 <img width="1115" height="770" alt="Screenshot 2026-05-30 at 1 40 18 PM" src="https://github.com/user-attachments/assets/267430a9-f54d-4cb8-b099-588839f6c9e1" />
@@ -58,21 +58,21 @@ PCB Layout:
 
 <img width="1115" height="770" alt="Screenshot 2026-05-30 at 1 41 31 PM" src="https://github.com/user-attachments/assets/8f7200e7-3fa3-4398-a5e5-5bcba1195b80" />
 
-<br><b>
+<br><b><br><br>
 
-Macropad Top Case:
+### Macropad Top Case:
 
 <img width="1175" height="756" alt="Screenshot 2026-05-30 at 1 43 57 PM" src="https://github.com/user-attachments/assets/c60f64a7-994c-4824-b546-12e2bcba4342" />
 
 <br>
 
-Macropad Bottom Case:
+#### Macropad Bottom Case:
 <img width="1175" height="756" alt="Screenshot 2026-05-30 at 1 46 41 PM" src="https://github.com/user-attachments/assets/dbd20fa5-8ca8-4ce6-af3b-f1c93db07eb4" />
 
 
 <br>
 
-Macropad Final Assembly:
+### Macropad Final Assembly:
 <img width="1175" height="756" alt="Screenshot 2026-05-30 at 1 44 16 PM" src="https://github.com/user-attachments/assets/6f29e158-8f8e-426c-830c-c94fb2ee9b58" />
 <br>
 
