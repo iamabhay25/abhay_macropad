@@ -22,30 +22,45 @@ Bill of Materials:<br>
 <br><br>
 
 PCB Schematic:
-<img width="1111" height="766" alt="Screenshot 2026-05-30 at 1 08 15 PM" src="https://github.com/user-attachments/assets/beb7da32-ae61-4d79-a0b3-4b0914cb1c65" />
+
+<img width="1115" height="770" alt="Screenshot 2026-05-30 at 1 39 43 PM" src="https://github.com/user-attachments/assets/147b6c05-4dff-4454-805b-16bef076c9a8" />
+
+
 <b><b>
 
 PCB Layout:
 <br>
-<img width="551" height="705" alt="Screenshot 2026-05-30 at 1 09 48 PM" src="https://github.com/user-attachments/assets/89970a38-5614-4b70-9b8f-940090b118bb" />
+
+<img width="1115" height="770" alt="Screenshot 2026-05-30 at 1 40 18 PM" src="https://github.com/user-attachments/assets/267430a9-f54d-4cb8-b099-588839f6c9e1" />
+
 <br>
-<img width="562" height="717" alt="Screenshot 2026-05-30 at 1 09 56 PM" src="https://github.com/user-attachments/assets/f59e8334-e26c-445c-9074-819d9fdac9b6" />
+
+<img width="1115" height="770" alt="Screenshot 2026-05-30 at 1 40 27 PM" src="https://github.com/user-attachments/assets/f2ded57b-2177-48fc-b90b-760e255e45ca" />
+
 <br>
-<img width="615" height="795" alt="Screenshot 2026-05-30 at 1 13 03 PM" src="https://github.com/user-attachments/assets/887355fc-76f0-4b2d-b3c0-cb232417b931" />
+<img width="1115" height="770" alt="Screenshot 2026-05-30 at 1 41 28 PM" src="https://github.com/user-attachments/assets/c88ece6e-7955-4566-85ca-3abb4439fe6e" />
+
+
 <br>
-<img width="621" height="813" alt="Screenshot 2026-05-30 at 1 12 20 PM" src="https://github.com/user-attachments/assets/59b7b9d5-78b6-487a-a175-b050e69d342e" />
+
+<img width="1115" height="770" alt="Screenshot 2026-05-30 at 1 41 31 PM" src="https://github.com/user-attachments/assets/8f7200e7-3fa3-4398-a5e5-5bcba1195b80" />
+
 <br><b>
 
 Macropad Top Case:
-<img width="1280" height="747" alt="Screenshot 2026-05-30 at 1 27 54 PM" src="https://github.com/user-attachments/assets/002a4821-4879-42cb-bb5f-f82fa8b1d3f6" />
+
+<img width="1175" height="756" alt="Screenshot 2026-05-30 at 1 43 57 PM" src="https://github.com/user-attachments/assets/c60f64a7-994c-4824-b546-12e2bcba4342" />
+
 <br>
 
 Macropad Bottom Case:
-<img width="1254" height="747" alt="Screenshot 2026-05-30 at 1 28 00 PM" src="https://github.com/user-attachments/assets/8edade4d-c812-418e-8e60-71f0f8ddabbf" />
+<img width="1175" height="756" alt="Screenshot 2026-05-30 at 1 46 41 PM" src="https://github.com/user-attachments/assets/dbd20fa5-8ca8-4ce6-af3b-f1c93db07eb4" />
+
+
 <br>
 
 Macropad Final Assembly:
-<img width="1288" height="758" alt="Screenshot 2026-05-30 at 1 28 06 PM" src="https://github.com/user-attachments/assets/f15dbfba-78fc-43b4-a68e-da9a92bb190d" />
+<img width="1175" height="756" alt="Screenshot 2026-05-30 at 1 44 16 PM" src="https://github.com/user-attachments/assets/6f29e158-8f8e-426c-830c-c94fb2ee9b58" />
 <br>
 
 
