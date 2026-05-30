@@ -14,7 +14,7 @@ Features 9 keys with per-key underglow LEDs, a 128×32 SSD1306 OLED display, and
 
 <br><br>
 
-| ⚡ RP2040 | ⌨️ 9 Keys | ✨ Underlit Keys | 📺 .91" OLED Screen | 🎛️ 1 Rotary Encoder |
+| ⚡ RP2040 MC | ⌨️ 9 Keys | ✨ Underlit Keys | 📺 .91" OLED Screen | 🎛️ 1 Rotary Encoder |
 |:--:|:--:|:--:|:--:|:--:|
 
 </div>
