@@ -1,7 +1,19 @@
 # Abhay's Macropad
-My personal macropad for everyday use. <br>
 <br>
-Bill of Materials:<br>
+My personal macropad for everyday use. 
+<br><br>
+Features 6 keys with per-key underglow LEDs, a 128×32 SSD1306 OLED display, and is powered by a Seeed Studio XIAO RP2040 microcontroller.
+<br><br>
+
+### SPONSORED BY: <br><br>
+
+
+<img width="320" height="112" alt="Hack_Club_Flag_Standalone svg" src="https://github.com/user-attachments/assets/8bc76b1a-8842-4f86-be09-2e3fcd437c8f" />
+<br>
+<br>
+Bill of Materials:
+<br><br>
+
 * 4x M2.5 self-tapping screws: $1.18
 * 4x M3 heat-set inserts: $1.99
 * 4x M3 machine screws: $1.87
