@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⌨️ Abhay's Macropad
+# Abhay's Macropad
 
 ### Custom 9-Key Macropad
 
