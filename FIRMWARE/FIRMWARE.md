@@ -1,4 +1,4 @@
-# Abhay’s Macropad Firmware Documentation
+# Abhay’s Macropad Firmware Documentation (Version 1)
 
 ## Overview
 
@@ -25,7 +25,7 @@ All components work together to handle input, visual output, and system control.
 
 * SSD1306 OLED (128×32, I2C)
 * Address: 0x3C
-* Custom lightweight driver (no external libraries)
+* Custom lightweight driver using framebuffer
 
 ### Input
 
@@ -92,13 +92,13 @@ Each key has:
 When a key is pressed:
 
 1. OLED animation starts
-2. The corresponding LED turns on with its assigned color
-3. The macro or shortcut is executed
+2. LED animation begins across the strip
+3. The corresponding macro or shortcut is executed
 4. The OLED displays the matching bitmap
 
 When the key is released:
 
-* All LEDs are turned off
+* LED animation clears the strip
 
 ---
 
@@ -125,7 +125,7 @@ The OLED uses a framebuffer-based driver.
 ### IN (slide-in)
 
 * Bitmap slides in from the right side
-* Fast transition into view
+* Smooth transition into view
 
 ### HOLD
 
@@ -135,7 +135,7 @@ The OLED uses a framebuffer-based driver.
 ### OUT (fade-out)
 
 * Bitmap is cleared using a pixel wipe effect
-* Returns to idle state
+* Returns to idle clock
 
 ---
 
@@ -146,14 +146,44 @@ The LED system controls 9 NeoPixel LEDs in a single chain.
 ### Behavior:
 
 * All LEDs are off when idle
-* Only one LED is active at a time
+* LEDs animate one-by-one when activated
 * Each key has a fixed RGB color
 
 ### Operation:
 
-1. All LEDs are cleared
-2. One LED is set to the active key color
-3. LED state is written to the strip
+#### On key press
+
+* LEDs light sequentially from index 0 up to the selected key index
+* Animation runs in small timed steps without blocking input
+
+#### On key release
+
+* LEDs clear sequentially from the active index back to 0
+
+### Control method
+
+* LED updates are handled inside the main scan loop
+* Animation runs independently of key processing
+
+---
+
+## LED Animation Engine
+
+The LED system uses a time-based animation controller.
+
+### Fill animation
+
+* LEDs turn on one-by-one from left to right
+* Each LED is assigned its key color
+
+### Clear animation
+
+* LEDs turn off one-by-one from right to left
+
+### Timing
+
+* Animation is stepped using millisecond intervals
+* No blocking delays are used
 
 ---
 
@@ -163,6 +193,7 @@ Controls system volume:
 
 * Rotate left → volume down
 * Rotate right → volume up
+* Press (if enabled) → mute toggle
 
 ---
 
@@ -188,13 +219,13 @@ Some keys execute multi-step macros instead of single shortcuts.
 
 ### OLED
 
-* Updates are timed to avoid unnecessary refreshes
+* Frame updates are timed to avoid unnecessary refresh
 * Animation states control rendering frequency
 
 ### LEDs
 
-* LED state is managed through a controlled update cycle
-* Prevents inconsistent LED output across keys
+* LED animation runs inside the keyboard scan loop
+* No blocking delays are used during updates
 
 ---
 
@@ -203,7 +234,7 @@ Some keys execute multi-step macros instead of single shortcuts.
 1. Key press is detected
 2. Macro or shortcut is executed
 3. OLED animation is triggered
-4. LED state is updated
+4. LED animation begins
 5. Encoder operates independently for volume control
 
 ---
@@ -214,7 +245,7 @@ This firmware runs a fully integrated macropad system:
 
 * 9 programmable keys
 * OLED display with animations
-* RGB LED feedback per key
+* RGB LED animated feedback per key
 * Rotary encoder for volume control
 
-All components are synchronized to respond to user input in real time.
+All components run together in a synchronized input-output loop.
