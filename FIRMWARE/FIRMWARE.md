@@ -1,116 +1,137 @@
-# Macropad Documentation
+# Macropad firmware documentation
 
-## Overview
-
-This is a 9 key macropad that connects to a computer. Each key does a shortcut so you don’t need to click around or remember key combos.
-
-It also has a knob for volume, RGB lights under each key, and a small OLED screen.
+This code runs a 9-key macropad with an OLED screen, RGB lights, and a rotary encoder. It is written using KMK firmware for a Seeed Studio XIAO RP2040.
 
 ---
 
-## Key Functions
+## Keyboard (9 keys)
 
-### Key 1
-Takes a screenshot of part of the screen. You select what area to capture.
+There are 9 keys arranged in a 3x3 grid.
 
----
+Each key is assigned:
+- a label
+- a keyboard shortcut or macro
+- a color for its RGB LED
+- an icon for the OLED screen
 
-### Key 2
-Opens Chrome in two ways:
-- One press = Chrome (school profile)
-- Two presses = Chrome (personal profile)
+When a key is pressed:
+- it sends a keyboard shortcut or runs a macro
+- it lights up its assigned RGB color
+- it triggers an OLED animation based on the key index
 
----
-
-### Key 3
-Reopens the last tab you closed in Chrome.
-
----
-
-### Key 4
-Opens force quit menu to close frozen apps.
+When released:
+- all RGB LEDs are turned off
 
 ---
 
-### Key 5
-Locks the computer.
+## OLED display
+
+The OLED is a 128×32 SSD1306 display.
+
+It is controlled using a custom driver that:
+- writes directly to the display over I2C
+- supports drawing text and bitmaps
+- uses a framebuffer for rendering
+
+The display shows different content depending on state.
 
 ---
 
-### Key 6
-Takes a screenshot of the whole screen.
+## OLED states
+
+The display runs a state machine with four states:
+
+### IDLE
+- Shows current time in HH:MM format
+- Shows date below the time
+- Colon in the time blinks every second
+
+### SLIDE
+- Displays the selected key’s bitmap
+- The image slides in from the right
+
+### HOLD
+- Keeps the bitmap fully visible
+- Holds for 10 seconds
+- No continuous redraws during this state
+
+### FADE
+- Gradually clears the image using a pixel removal pattern
+- Returns to idle state after completion
 
 ---
 
-### Key 7
-Opens Spotify.
+## Bitmaps
+
+Each key has a 128×32 monochrome bitmap.
+
+These bitmaps are stored as byte arrays and represent:
+- app icons
+- control icons
+- system actions
+
+The bitmap is displayed when the key is triggered.
 
 ---
 
-### Key 8
-Plays or pauses music or videos.
+## RGB LEDs
+
+There are 9 NeoPixel LEDs, one per key.
+
+Behavior:
+- all LEDs are off when idle
+- only the active key LED turns on
+- each key has a fixed RGB color
 
 ---
 
-### Key 9
-Opens Spotlight search.
+## Rotary encoder
 
----
-
-## Knob (Rotary Encoder)
-
-- Turn left = volume down  
-- Turn right = volume up  
-- Press = does nothing
-
----
-
-## RGB Lights
-
-- 9 lights (one under each key)
-- White color
-- Half brightness
-- No animations
-
----
-
-## OLED Screen
-
-- Small screen (128x32)
-- Used for basic status info
-- Connected using I2C (0x3C)
-
----
-
-## How the code works
-
-The firmware uses KMK. It does:
-
-- Reads which key you press
-- Runs macros (multiple steps at once)
-- Detects single vs double press (tap dance)
-- Controls the knob
-- Controls lights
-- Controls OLED screen
+The encoder is used for volume control:
+- rotating left decreases volume
+- rotating right increases volume
 
 ---
 
 ## Macros
 
-### Chrome key
-- Opens search (Spotlight)
-- Types "Chrome"
-- Presses enter
-- Waits a bit
-- Switches profile depending on tap
+Some keys run multi-step macros instead of single shortcuts.
 
-### Spotify key
-- Opens search (Spotlight)
-- Types "Spotify"
-- Presses enter
+Examples:
+- Chrome key opens Spotlight, types “Chrome”, then launches it
+- Spotify key opens Spotlight and launches Spotify
+
+Macros use delays and simulated key presses.
+
+---
+
+## Key press flow
+
+When a key is pressed:
+
+1. OLED animation is triggered (SLIDE state)
+2. RGB LED for that key turns on
+3. The assigned shortcut or macro runs
+4. The OLED displays the bitmap
+5. After 10 seconds, the screen fades back to idle
+
+---
+
+## Performance
+
+The code is optimized by:
+- limiting OLED refresh rate (~25 FPS)
+- skipping redraws during HOLD state
+- using direct bitmap writes instead of per-pixel updates
 
 ---
 
 ## Summary
 
-This macropad makes common actions faster by turning them into one button presses instead of using menus or shortcuts.
+This firmware controls:
+- 9 programmable macro keys
+- OLED display with animations
+- per-key RGB lighting
+- rotary encoder for volume control
+
+It handles input, display output, and macros in a single system.
