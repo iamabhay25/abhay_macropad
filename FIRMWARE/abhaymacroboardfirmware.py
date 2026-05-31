@@ -8,8 +8,20 @@ from kmk.extensions.neopixel import NeoPixel
 from kmk.extensions.oled import Oled
 
 from kmk.modules.encoder import EncoderHandler
+from kmk.modules.tapdance import TapDance
+from kmk.modules.macros import Macros, Tap, Delay
 
 keyboard = KMKKeyboard()
+
+# ============================================================
+# MODULES
+# ============================================================
+
+tapdance = TapDance()
+keyboard.modules.append(tapdance)
+
+macros = Macros()
+keyboard.modules.append(macros)
 
 # ============================================================
 # MATRIX (3x3)
@@ -44,7 +56,7 @@ oled = Oled(
 keyboard.extensions.append(oled)
 
 # ============================================================
-# RGB LEDs (9 LEDs @ 50% brightness)
+# RGB LEDs
 # ============================================================
 
 rgb = NeoPixel(
@@ -56,7 +68,6 @@ rgb = NeoPixel(
 
 keyboard.extensions.append(rgb)
 
-# White LEDs
 rgb.fill((255, 255, 255))
 
 # ============================================================
@@ -70,13 +81,46 @@ encoder_handler.pins = (
     (board.GP29, board.GP0, None),
 )
 
-# Counter-clockwise = screen brightness down
-# Clockwise = screen brightness up
 encoder_handler.map = [
     (
-        (KC.BRIGHTNESS_DOWN, KC.BRIGHTNESS_UP, KC.NO),
+        (KC.VOLD, KC.VOLU, KC.NO),
     ),
 ]
+
+# ============================================================
+# MACROS
+# ============================================================
+
+OPEN_CHROME_SCHOOL = KC.MACRO(
+    Tap(KC.LGUI, KC.SPACE),
+    Delay(200),
+    "CHROME",
+    Tap(KC.ENTER),
+    Delay(600),
+    *([Tap(KC.TAB)] * 10)
+)
+
+OPEN_CHROME_PERSONAL = KC.MACRO(
+    Tap(KC.LGUI, KC.SPACE),
+    Delay(200),
+    "CHROME",
+    Tap(KC.ENTER),
+    Delay(600),
+    *([Tap(KC.TAB)] * 7)
+)
+
+CHROME_SELECTOR = KC.TD(
+    OPEN_CHROME_SCHOOL,      # Single tap
+    OPEN_CHROME_PERSONAL     # Double tap
+)
+
+OPEN_SPOTIFY = KC.MACRO(
+    Tap(KC.LGUI, KC.SPACE),
+    Delay(200),
+    "SPOTIFY",
+    Tap(KC.ENTER),
+    Delay(500),
+)
 
 # ============================================================
 # KEYMAP
@@ -84,9 +128,17 @@ encoder_handler.map = [
 
 keyboard.keymap = [
     [
-        KC.N1, KC.N2, KC.N3,
-        KC.N4, KC.N5, KC.N6,
-        KC.N7, KC.N8, KC.N9,
+        KC.LGUI(KC.LSHIFT(KC.N4)),  # 1 Screenshot Selection
+        CHROME_SELECTOR,            # 2 Chrome School/Personal
+        KC.LGUI(KC.LSHIFT(KC.T)),   # 3 Reopen Closed Tab
+
+        KC.LGUI(KC.LALT(KC.ESC)),   # 4 Force Quit
+        KC.LCTRL(KC.LGUI(KC.Q)),    # 5 Lock Screen
+        KC.LGUI(KC.LSHIFT(KC.N3)),  # 6 Full Screen Screenshot
+
+        OPEN_SPOTIFY,               # 7 Open Spotify
+        KC.MPLY,                    # 8 Play/Pause
+        KC.LGUI(KC.SPACE),          # 9 Spotlight
     ]
 ]
 
