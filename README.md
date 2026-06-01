@@ -57,26 +57,18 @@ Features 9 keys with per-key underglow LEDs, a 128×32 SSD1306 OLED display, and
 | 1x | Flux | $1.41 |
 | 1x | Custom PCB | $3.30 |
 | 1x | 3D Printed Case (Printing Legion) | $0.00 |
-|  | **Parts Subtotal** | **$35.16** |
-|  | Fees | $4.01 |
-|  | Tax | $2.96 |
-|  | **Grand Total** | **$42.13** |
-
-
-</div>
-
-<div align="center">
 
 <br>
 
-**Shipping:** $3.99  
-<br>
-**Tax:** $3.17  
+**Parts Subtotal:** $35.16
 
-<br>
+**Fees:** $4.01
 
-**Total Parts Cost:** $47.02  
-**Total w/ Printing Legion Shipping:** $54.02
+**Tax:** $2.96
+
+**Printing Legion Shipping:** $7.00
+
+**Grand Total:** $49.13
 
 <br><br><br><br><br>
 
