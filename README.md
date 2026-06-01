@@ -2,9 +2,6 @@
 
 # Abhay's Macropad
 
-### Hackatime link: 
-https://hackatime.hackclub.com/my/projects/abhay
-
 ### Custom 9-Key Macropad
 
 Custom designed macropad for everyday use.
