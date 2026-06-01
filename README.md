@@ -54,7 +54,7 @@ Features 9 keys with per-key underglow LEDs, a 128×32 SSD1306 OLED display, and
 | 3x | 1206 Capacitors | $1.27 |
 | 1x | 0805 Resistor | $1.42 |
 | 1x | Bus Buffer Gate | $1.51 |
-| 1x | Flux | $1.41 |
+| 1x | Soldering Wire | $1.41 |
 | 1x | Custom PCB | $3.30 |
 | 1x | 3D Printed Case (Printing Legion) | $0.00 |
 
