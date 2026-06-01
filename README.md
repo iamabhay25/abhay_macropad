@@ -2,6 +2,9 @@
 
 # Abhay's Macropad
 
+### Hackatime link: 
+https://hackatime.hackclub.com/my/projects/abhay
+
 ### Custom 9-Key Macropad
 
 Custom designed macropad for everyday use.
@@ -73,8 +76,7 @@ Features 9 keys with per-key underglow LEDs, a 128×32 SSD1306 OLED display, and
 <br><br>
 
 <div align="left">
-
-
+  
 ### PCB Schematic
 
 <br>
